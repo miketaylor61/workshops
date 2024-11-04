@@ -1,0 +1,16 @@
+app: workshops
+env: funky-dream
+namespace: default
+chart:
+  repository: https://chart.onechart.dev
+  name: onechart
+  version: 0.70.0
+values:
+  gitRepository: miketaylor61/workshops
+  gitSha: '{{ .SHA }}'
+  image:
+    registry: public
+    strategy: static
+    tag: "1.27"
+  resources:
+    ignoreLimits: true
